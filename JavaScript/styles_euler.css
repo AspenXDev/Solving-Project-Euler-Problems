@@ -1,0 +1,60 @@
+/* styles_euler.css */
+
+body {
+  background-color: #faf0e6;
+  font-family: "Baskerville", serif;
+}
+h1 {
+  background-color: powderblue;
+  padding: 10px;
+  text-align: center;
+  font-style: italic;
+}
+#result1 {
+  background-color: teal;
+  padding: 10px;
+  text-align: center;
+  font-style: italic;
+}
+#result2 {
+  background-color: teal;
+  padding: 10px;
+  text-align: center;
+  font-style: italic;
+}
+spacer {
+  height: 2em;
+}
+
+mjx-container {
+  font-family: "Cambria Math", "Latin Modern Math", "STIX Math", serif;
+  font-size: 2.5em;
+  text-align: center;
+  display: block;
+}
+
+mjx-math {
+  color: #000; /* Black color */
+  font-style: normal;
+  font-size: 2.5em;
+}
+
+mjx-mfrac {
+  padding: 2px;
+}
+
+#result {
+  font-family: "Roboto", sans-serif; /* Modern, clean sans-serif font */
+  font-size: 24px; /* Larger text for better visibility */
+  font-weight: bold; /* Make it stand out */
+  color: #4caf50; /* A modern, vibrant green */
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  padding: 5px 10px; /* Add some spacing around the text */
+  background-color: rgba(
+    0,
+    0,
+    0,
+    0.05
+  ); /* Light background color for contrast */
+  border-radius: 5px; /* Rounded corners for a modern touch */
+}
