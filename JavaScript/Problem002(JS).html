@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Solving Problems of Project Euler</title>
+    <link rel="stylesheet" href="styles_euler.css" />
+    <!-- Load MathJax -->
+    <script>
+      MathJax = {
+        tex: {
+          inlineMath: [
+            ["$", "$"],
+            ["\\(", "\\)"],
+          ],
+        },
+      };
+    </script>
+    <script
+      type="text/javascript"
+      id="MathJax-script"
+      async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+    ></script>
+  </head>
+  <body>
+    <h1>Here we go.</h1>
+    <h4><b>Problem Title: Even Fibonacci Numbers</b></h4>
+    <h3>Problem Number: 002</h3>
+    <h3>
+      <p>
+        Problem Definition: Each new term in the Fibonacci sequence is generated
+        by adding the previous two terms.
+      </p>
+      <p>By starting with 1 and 2, the first terms will be:</p>
+      <p>1, 2, 3, 5, 8, 13, 21, 34, 55, 89</p>
+    </h3>
+    <h4>
+      Problem Question: By considering the terms in the Fibonacci sequence whose
+      values do not exceed four million, find the sum of the even-valued terms.
+    </h4>
+    <hr />
+    <p>
+      Just figuring out the first four million Fibonacci numbers seem like a big
+      task.
+    </p>
+    <p>Thankfully we only need half of them.</p>
+    <!-- Display Bean-Counting Result -->
+    <p>
+      Nevertheless, even by brute force, we get the answer:
+      <span id="result1"></span>
+    </p>
+    <hr />
+    <p>
+      I believe we are all convinced there must be a more elegant way to derive
+      the same answer, but... I will have to sit on it first.
+    </p>
+
+    <script>
+      // Scripts run after all elements are loaded
+      document.addEventListener("DOMContentLoaded", function () {
+        // Create function module to find and sum Fibonacci numbers
+        function sumEvenFibonacci(limit) {
+          let a = 1,
+            b = 2,
+            sum = 0;
+
+          while (b <= limit) {
+            if (b % 2 === 0) {
+              // testing if new b is even
+              sum += b;
+            }
+            let nextFib = a + b; // next Fibonacci number is the sum of the previous two Fibonacci numbers
+            a = b; // update 'a' to the current value of 'b' meaning we move the window 1 notch up
+            b = nextFib; // update 'b' to the new 'nextFib' so that it may be tested against the limit for looping
+          }
+          return sum;
+        }
+
+        // Call the function with the limit of 4 million and display the result
+        let result = sumEvenFibonacci(4000000); // Output: 4613732
+        document.getElementById("result1").textContent = result; // Display the result in the span
+      });
+    </script>
+  </body>
+</html>

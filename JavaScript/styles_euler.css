@@ -9,18 +9,21 @@ h1 {
   padding: 10px;
   text-align: center;
   font-style: italic;
+  font-weight: bold;
 }
 #result1 {
   background-color: teal;
   padding: 10px;
   text-align: center;
   font-style: italic;
+  font-weight: bold;
 }
 #result2 {
   background-color: teal;
   padding: 10px;
   text-align: center;
   font-style: italic;
+  font-weight: bold;
 }
 spacer {
   height: 2em;
