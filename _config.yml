@@ -1,9 +1,8 @@
  Site settings
  title: "My Project Euler Solutions"
- description: "A collection of my solutions to Project Euler problems."
+ description: "A journal of my solutions to Project Euler problems"
  url: "https://aspenxdev.github.io/Solving-Project-Euler-Problems/"
- baseurl: "" # Leave as empty string bcause using GitHub Pages root
- theme: "minima" # more themes at https://jekyllrb.com/docs/themes/
+ theme: "minimal-mistakes-jekyll"
  author:
   name: "Victor"
   email: "ayechanvictor@gmail.com"
@@ -18,19 +17,8 @@ plugins:
   - jekyll-seo-tag # Adds SEO tags
   - jekyll-feed # Adds RSS feed to the site
 
-# Permalink settings
-permalink: "pretty" # 'pretty' for clean URLs (e.g., /about instead of /about.html)
+permalink: "pretty" # 'clean URLs (e.g., /about instead of /about.html)
+markdown: kramdown # default
 
-# Markdown settings
-markdown: kramdown # Default markdown processor
-
-# Build settings (can be left empty or set up with specific build configurations)
 exclude:
-  - README.md # Exclude certain files from being processed
-
-# Optional: for custom page layouts
-defaults:
-  - scope:
-      path: ""
-    values:
-      layout: "default" # All pages will use this layout unless overridden
+  - README.md
