@@ -9,6 +9,6 @@ title: My GitHub Page!
 
 ##For easy reference and study, here are my solutions to:
 
-### - [Problem 001](./JavaScript/Problem001.html)
+### - [Problem 001](./HTML/Problem001.html)
 
-### - [Problem 002](./JavaScript/Problem002.html)
+### - [Problem 002](./HTML/Problem002.html)
