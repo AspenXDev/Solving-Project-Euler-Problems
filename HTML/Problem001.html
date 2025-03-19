@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Solving Problems of Project Euler</title>
+    <link rel="stylesheet" href="css/styles_euler.css" />
+    <!-- Load MathJax -->
+    <script>
+      MathJax = {
+        tex: {
+          inlineMath: [
+            ["$", "$"],
+            ["\\(", "\\)"],
+          ],
+        },
+      };
+    </script>
+    <script
+      type="text/javascript"
+      id="MathJax-script"
+      async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+    ></script>
+
+    <!-- Load JS algo for brute force solving -->
+    <script defer src="../JavaScript/Problem001SumMultiples.js"></script>
+
+    <!-- Load JS algo for elegant solving -->
+    <script defer src="../JavaScript/Problem001SumAP.js"></script>
+  </head>
+  <body>
+    <h1>Here we go.</h1>
+    <h3><b>Problem Title: Multiples of 3 or 5</b></h3>
+    <h3>Problem Number: 001</h3>
+    <h3>
+      Problem Definition: If we list all the natural numbers below 10 that are
+      multiples of 3 or 5, we get 3, 5, 6, and 9. The sum of these multiples is
+      23.
+    </h3>
+    <h4>
+      Problem Question: Find the sum of all the multiples of 3 or 5 below 1000.
+    </h4>
+
+    <p>It is a simple enough question, so we'll just sum both multiples (3+6+9+...+5+10+15...) and take away the repeated numbers.</p>
+
+    <!-- Input fields for user to enter multiples and limit, for use with "sumUsingBeanCounting"-->
+    <label for="multiple1_1">Enter first multiple: </label>
+    <input
+      type="number"
+      id="multiple1_1"
+      placeholder="Enter first multiple"
+      required
+    />
+    <br /><br />
+
+    <label for="multiple1_2">Enter second multiple: </label>
+    <input
+      type="number"
+      id="multiple1_2"
+      placeholder="Enter second multiple"
+      required
+    />
+    <br /><br />
+
+    <label for="limit1">Enter limit: </label>
+    <input type="number" id="limit1" placeholder="Enter limit" required />
+    <br /><br />
+
+    <!-- Button to trigger the calculation for Bean Counting -->
+    <button id="calculateSimplyButton">Calculate simply</button>
+
+    <!-- Display Bean-Counting Result -->
+    <p>Counting it manually, we get the answer: <span id="result1"></span></p>
+    <p>But the counting does take a while when the limit is higher:
+    <span id="executionTimeBeanCounting">--</span> ms</p>
+    </p>
+    <hr />
+
+    <p>That begs the question: Isn't there a more elegant solution?</p>
+    <p>And indeed there is one.</p><br>
+    <p>The Arithmetic Progression Series allows us to compute it neatly!</p>
+    <div>$$ S_n = \frac{n}{2} [2a + (n-1)d] $$</div>
+    given <b><i>a</i></b>as the first term, <b><i>d</i></b> as the common
+    difference, and <b><i>n</i></b> as the number of terms in the sum, we can find the sum of multiples of any number.
+    <p>Let's try it this way and see if it's faster.</p>
+    <!-- Input fields for user to enter multiples and limit, for use with "sumUsingAP"-->
+    <label for="multiple2_1">Enter first multiple: </label>
+    <input
+      type="number"
+      id="multiple2_1"
+      placeholder="Enter first multiple"
+      required
+    />
+    <br /><br />
+
+    <label for="multiple2_2">Enter second multiple: </label>
+    <input
+      type="number"
+      id="multiple2_2"
+      placeholder="Enter second multiple"
+      required
+    />
+    <br /><br />
+
+    <label for="limit2">Enter limit: </label>
+    <input type="number" id="limit2" placeholder="Enter limit" required />
+    <br /><br />
+
+    <!-- Button to trigger the calculation for Arithmetic Progression -->
+    <button id="calculateAPButton">Calculate AP Sum</button>
+
+    <!-- Display Arithmetic Progression Result -->
+    <p>Doing this arrive at the same answer: <span id="result2"></span></p>
+    <p>much more quickly: <span id="executionTimeAP">--</span> ms</p>
+  </body>
+</html>
