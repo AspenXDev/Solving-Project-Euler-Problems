@@ -30,19 +30,20 @@
     <script defer src="../JavaScript/Problem001SumAP.js"></script>
   </head>
   <body>
-    <h1>Here we go.</h1>
-    <h3><b>Problem Title: Multiples of 3 or 5</b></h3>
-    <h3>Problem Number: 001</h3>
+    <h1>Here we go.</h1><br>
+    <h2>Let's solve a problem from <a href="https://projecteuler.net/about">Project Euler</a>.</h2>
+    <h3><b>Problem Number:</b> 001</h3>
+    <h3><b>Problem Title:</b> Multiples of 3 or 5</h3>
     <h3>
-      Problem Definition: If we list all the natural numbers below 10 that are
+        <b>Problem Definition:</b> If we list all the natural numbers below 10 that are
       multiples of 3 or 5, we get 3, 5, 6, and 9. The sum of these multiples is
       23.
     </h3>
     <h4>
-      Problem Question: Find the sum of all the multiples of 3 or 5 below 1000.
+        <b>Problem Question:</b> Find the sum of all the multiples of 3 or 5 below 1000.
     </h4>
 
-    <p>It is a simple enough question, so we'll just sum both multiples (3+6+9+...+5+10+15...) and take away the repeated numbers.</p>
+    <p>It is a simple enough question, so let's sum both multiples (<b>3</b>+6+9+...+<b>5</b>+10+15...) up to the limit, and take away the repeated numbers.</p>
 
     <!-- Input fields for user to enter multiples and limit, for use with "sumUsingBeanCounting"-->
     <label for="multiple1_1">Enter first multiple: </label>
@@ -111,7 +112,7 @@
     <button id="calculateAPButton">Calculate AP Sum</button>
 
     <!-- Display Arithmetic Progression Result -->
-    <p>Doing this arrive at the same answer: <span id="result2"></span></p>
-    <p>much more quickly: <span id="executionTimeAP">--</span> ms</p>
+    <p>Doing this, we arrive at the same answer: <span id="result2"></span></p>
+    <p>but much more quickly, taking only <span id="executionTimeAP">--</span> ms!</p>
   </body>
 </html>
