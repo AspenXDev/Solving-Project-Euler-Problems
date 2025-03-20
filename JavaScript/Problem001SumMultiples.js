@@ -1,4 +1,5 @@
-// This JS sums numbers that are multiples of two user-defined number and user-defined limit using the bean-counting method
+// This JS sums numbers that are multiples of two user-defined number and user-defined limit
+// using the bean-counting method
 document.addEventListener("DOMContentLoaded", function () {
   document
     .getElementById("calculateSimplyButton")
@@ -59,15 +60,17 @@ function calculateSimply() {
   console.log("sumAllMultiples value:", sumAllMultiples);
 
   // Update the result in the DOM
-  document.getElementById("result1").textContent = `${sumAllMultiples}`;
+  document.getElementById(
+    "result01"
+  ).textContent = `${sumAllMultiples.toLocaleString()}`;
 
   // End timer
   const endTime = performance.now();
   // Calculate execution time
-  const executionTimeBeanCounting = (endTime - startTime).toFixed(2);
+  const executionTime01 = (endTime - startTime).toFixed(2);
 
   // Display execution time
   document.getElementById(
-    "executionTimeBeanCounting"
-  ).textContent = `${executionTimeBeanCounting} `;
+    "executionTime01"
+  ).textContent = `${executionTime01} `;
 }

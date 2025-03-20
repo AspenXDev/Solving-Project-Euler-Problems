@@ -1,3 +1,5 @@
+// This JS sums numbers that are multiples of two user-defined number and user-defined limit
+// using the Arithmetic Progression Sum method
 document.addEventListener("DOMContentLoaded", function () {
   document
     .getElementById("calculateAPButton")
@@ -32,9 +34,9 @@ function calculateByAP() {
     multiple2_1 <= 0 ||
     multiple2_2 <= 0
   ) {
-    document.getElementById("result2").textContent =
+    document.getElementById("result02").textContent =
       "Please enter valid positive numbers.";
-    document.getElementById("executionTimeAP").textContent = "";
+    document.getElementById("executionTime02").textContent = "";
     return;
   }
 
@@ -43,12 +45,12 @@ function calculateByAP() {
     return (n / 2) * (2 * a + (n - 1) * d);
   }
 
-  // Function to calculate Greatest Common Divisor (GCD) using Euclidean Algorithm
+  // Helper Function to calculate Greatest Common Divisor (GCD) using Euclidean Algorithm
   function gcd(a, b) {
     return b === 0 ? a : gcd(b, a % b);
   }
 
-  // Function to calculate Least Common Multiple (LCM)
+  // Helper Function to calculate Least Common Multiple (LCM)
   function lcm(a, b) {
     return (a * b) / gcd(a, b);
   }
@@ -68,19 +70,20 @@ function calculateByAP() {
 
   // Apply inclusion-exclusion principle to avoid double-counting
   const totalSum = sumMultiple1 + sumMultiple2 - sumCommon;
-
   console.log("Total sum of multiples:", totalSum);
 
   // Display the result in the DOM
-  document.getElementById("result2").textContent = totalSum;
+  document.getElementById(
+    "result02"
+  ).textContent = `${totalSum.toLocaleString()}`;
 
   // End timer
   const endTime = performance.now();
   // Calculate execution time
-  const executionTimeAP = (endTime - startTime).toFixed(2);
+  const executionTime02 = (endTime - startTime).toFixed(2);
 
   // Display execution time
   document.getElementById(
-    "executionTimeAP"
-  ).textContent = `${executionTimeAP} `;
+    "executionTime02"
+  ).textContent = `${executionTime02} `;
 }
