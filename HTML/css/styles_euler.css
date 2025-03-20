@@ -1,9 +1,15 @@
 /* styles_euler.css */
-
 body {
   background-color: #faf0e6;
   font-family: "Baskerville", serif;
+  padding: 5px;
 }
+
+p {
+  margin-bottom: 1px;
+  line-height: 1;
+}
+
 h1 {
   background-color: powderblue;
   padding: 10px;
@@ -32,7 +38,7 @@ mjx-mfrac {
   padding: 2px;
 }
 
-#result1 {
+#result01 {
   font-family: "Roboto", sans-serif; /* Modern, clean sans-serif font */
   font-size: 24px; /* Larger text for better visibility */
   font-weight: bold; /* Make it stand out */
@@ -48,7 +54,71 @@ mjx-mfrac {
   border-radius: 5px; /* Rounded corners for a modern touch */
 }
 
-#result2 {
+#result02 {
+  font-family: "Roboto", sans-serif; /* Modern, clean sans-serif font */
+  font-size: 24px; /* Larger text for better visibility */
+  font-weight: bold; /* Make it stand out */
+  color: #4caf50; /* A modern, vibrant green */
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  padding: 5px 10px; /* Add some spacing around the text */
+  background-color: rgba(
+    0,
+    0,
+    0,
+    0.05
+  ); /* Light background color for contrast */
+  border-radius: 5px; /* Rounded corners for a modern touch */
+}
+
+#result03 {
+  font-family: "Roboto", sans-serif; /* Modern, clean sans-serif font */
+  font-size: 24px; /* Larger text for better visibility */
+  font-weight: bold; /* Make it stand out */
+  color: #4caf50; /* A modern, vibrant green */
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  padding: 5px 10px; /* Add some spacing around the text */
+  background-color: rgba(
+    0,
+    0,
+    0,
+    0.05
+  ); /* Light background color for contrast */
+  border-radius: 5px; /* Rounded corners for a modern touch */
+}
+
+#executionTime01 {
+  font-family: "Roboto", sans-serif; /* Modern, clean sans-serif font */
+  font-size: 24px; /* Larger text for better visibility */
+  font-weight: bold; /* Make it stand out */
+  color: #4caf50; /* A modern, vibrant green */
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  padding: 5px 10px; /* Add some spacing around the text */
+  background-color: rgba(
+    0,
+    0,
+    0,
+    0.05
+  ); /* Light background color for contrast */
+  border-radius: 5px; /* Rounded corners for a modern touch */
+}
+
+#executionTime02 {
+  font-family: "Roboto", sans-serif; /* Modern, clean sans-serif font */
+  font-size: 24px; /* Larger text for better visibility */
+  font-weight: bold; /* Make it stand out */
+  color: #4caf50; /* A modern, vibrant green */
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  padding: 5px 10px; /* Add some spacing around the text */
+  background-color: rgba(
+    0,
+    0,
+    0,
+    0.05
+  ); /* Light background color for contrast */
+  border-radius: 5px; /* Rounded corners for a modern touch */
+}
+
+#executionTime03 {
   font-family: "Roboto", sans-serif; /* Modern, clean sans-serif font */
   font-size: 24px; /* Larger text for better visibility */
   font-weight: bold; /* Make it stand out */

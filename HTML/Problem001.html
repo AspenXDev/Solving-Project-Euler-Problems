@@ -34,14 +34,14 @@
     <h2>Let's solve a problem from <a href="https://projecteuler.net/about">Project Euler</a>.</h2>
     <h3><b>Problem Number:</b> 001</h3>
     <h3><b>Problem Title:</b> Multiples of 3 or 5</h3>
-    <h3>
+    <p>
         <b>Problem Definition:</b> If we list all the natural numbers below 10 that are
-      multiples of 3 or 5, we get 3, 5, 6, and 9. The sum of these multiples is
+      multiples of 3 or 5, we get 3, 5, 6, and 9; The sum of these multiples is
       23.
-    </h3>
-    <h4>
+    </p>
+    <p>
         <b>Problem Question:</b> Find the sum of all the multiples of 3 or 5 below 1000.
-    </h4>
+    </p>
 
     <p>It is a simple enough question, so let's sum both multiples (<b>3</b>+6+9+...+<b>5</b>+10+15...) up to the limit, and take away the repeated numbers.</p>
 
@@ -72,19 +72,25 @@
     <button id="calculateSimplyButton">Calculate simply</button>
 
     <!-- Display Bean-Counting Result -->
-    <p>Counting it manually, we get the answer: <span id="result1"></span></p>
+    <p>Counting it manually, we get the answer: <span id="result01"></span></p>
     <p>But the counting does take a while when the limit is higher:
-    <span id="executionTimeBeanCounting">--</span> ms</p>
+    <span id="executionTime01">--</span> ms</p>
     </p>
     <hr />
 
-    <p>That begs the question: Isn't there a more elegant solution?</p>
-    <p>And indeed there is one.</p><br>
+    <b><p>That begs the question:</b> Isn't there a more elegant solution?</p>
+    <p>And indeed there is one.</p>
     <p>The Arithmetic Progression Series allows us to compute it neatly!</p>
     <div>$$ S_n = \frac{n}{2} [2a + (n-1)d] $$</div>
-    given <b><i>a</i></b>as the first term, <b><i>d</i></b> as the common
-    difference, and <b><i>n</i></b> as the number of terms in the sum, we can find the sum of multiples of any number.
-    <p>Let's try it this way and see if it's faster.</p>
+    given <b><i>a</i></b> is the first term, <b><i>d</i></b> is the common
+    difference, and <b><i>n</i></b> is the number of terms in the sum, we can find the sum of multiples of any number.
+    
+    <p>Since we want to sum multiples, d will be equal to a, and n will be the rounded down integer of the limit divided by the multiple.</p>
+    <p>We will have to do this for both multiples, and deduct the repeated terms (ie. the sum of the lowest common multiplier's Arithmetic Progression).</p>
+    <br>
+    <br.
+    <p>Sounds cumblesome?</p>
+    <p>Let's try it and see if it really is.</p>
     <!-- Input fields for user to enter multiples and limit, for use with "sumUsingAP"-->
     <label for="multiple2_1">Enter first multiple: </label>
     <input
@@ -112,7 +118,10 @@
     <button id="calculateAPButton">Calculate AP Sum</button>
 
     <!-- Display Arithmetic Progression Result -->
-    <p>Doing this, we arrive at the same answer: <span id="result2"></span></p>
-    <p>but much more quickly, taking only <span id="executionTimeAP">--</span> ms!</p>
+    <p>Doing this, we arrive at the same answer: <span id="result02"></span></p>
+    <p>and much more quickly - taking only <span id="executionTime02">--</span> ms</p>
+    <br /><br />
+    <i><p>P.S: Check the answers for the original question against the official Project Euler site <a href="https://projecteuler.net/problem=1" target="_blank" rel="noopener noreferrer">here</a>.</p>
+    <p>And try out with trickier numbers to see how the AP method works better than the basic iterative way!</p></i>
   </body>
 </html>
