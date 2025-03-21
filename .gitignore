@@ -4,6 +4,9 @@ Git/
 # Ignore "Microsoft VS Code" folder
 .vscode/
 
+# Ignore "Python" folder
+.Python/
+
 # Ignore node_modules (for Node.js projects)
 node_modules/
 

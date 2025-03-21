@@ -12,3 +12,4 @@ The solutions are written in **JavaScript** and **Python** to demonstrate my ski
 
 - JavaScript (for general problem-solving and later transition to ServiceNow)
 - Python (for efficient algorithm development and problem-solving)
+- HTML and CSS are used for frontend presentation
