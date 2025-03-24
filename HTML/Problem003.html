@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Solving Problems of Project Euler</title>
+    <link rel="stylesheet" href="css/styles_euler.css" />
+  </head>
+  <body>
+    <h1>Here we go again.</h1>
+    <h2>
+      Let's solve another problem from
+      <a href="https://projecteuler.net/about">Project Euler</a>.
+    </h2>
+    <h3>Problem Number: 003</h3>
+    <h4><b>Problem Title: Largest Prime Factor</b></h4>
+    <p>Problem Definition: The prime factors of 13195 are 5, 7, 13 and 29.</p>
+    <p>
+      <b>Problem Question: </b>What is the largest prime factor of the number
+      600851475143?
+    </p>
+    <hr />
+    <label for="numberToFindLargestPrimeFactorFor"
+      ><br />What number's largest prime factor would you like to know? </label
+    ><br />
+    <input
+      type="number"
+      id="numberToFindLargestPrimeFactorFor"
+      placeholder="Number to find largest prime factor of"
+      required
+    />
+    <br /><br />
+    <button id="calculateLargestPrimeFactorButton">
+      Calculate Iteratively
+    </button>
+    <p>Answer: <span id="result01"></span></p>
+    <p>
+      This iterative method took us
+      <span id="executionTime01">--</span>
+    </p>
+    <hr />
+    <p>
+      <br><b>Explanation of the algorithm used:</b></br>
+<pre>   Start with the smallest prime factor, 2:
+            If the number is divisible by 2 (i.e., even),
+            divide it by 2 repeatedly until it’s no longer divisible by 2.
+            This removes all factors of 2.
+    
+            Check odd numbers starting from 3:
+                After removing factors of 2,
+                the remaining number must be odd.
+                So, start checking odd numbers (3, 5, 7, 9, etc.) as potential factors.
+    
+            For each odd number, keep dividing the number by it until it’s no longer divisible.
+            This removes all factors of that number.
+    
+            Stop when the factor is greater than the square root of the remaining number:
+                If the remaining number becomes smaller than the factor we're checking,
+                there’s no need to check any larger numbers.
+                The largest factor left is the largest prime factor.
+    
+            If there’s anything left:
+                If the number left after dividing by smaller factors is greater than 1,
+                it’s itself a prime factor and the largest one.</pre>
+
+    <hr />
+
+    <!-- Load JavaScript after DOM -->
+    <script defer src="../JavaScript/Problem003LargestPrimeFactor-TrialDivision.js"></script>
+
+  </body>
+</html>

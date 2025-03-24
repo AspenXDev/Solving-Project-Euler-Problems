@@ -21,4 +21,6 @@ title: My GitHub Page!
 
 #### - [Problem 002](./HTML/Problem002.html)
 
+#### - [Problem 003](./HTML/Problem003.html)
+
 #### There will be more to come of course; Stay tuned!
