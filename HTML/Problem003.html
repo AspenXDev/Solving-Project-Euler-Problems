@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="css/styles_euler.css" />
   </head>
   <body>
+    <div class="container">
     <h1>Here we go again.</h1>
     <h2>
       Let's solve another problem from
@@ -41,7 +42,7 @@
     <hr />
     <p>
       <br><b>Explanation of the algorithm used:</b></br>
-<pre>   Start with the smallest prime factor, 2:
+<div class="Explanation"><pre>   Start with the smallest prime factor, 2:
             If the number is divisible by 2 (i.e., even),
             divide it by 2 repeatedly until it’s no longer divisible by 2.
             This removes all factors of 2.
@@ -62,11 +63,15 @@
             If there’s anything left:
                 If the number left after dividing by smaller factors is greater than 1,
                 it’s itself a prime factor and the largest one.</pre>
+</div>
 
     <hr />
 
+    <i><p>P.S: Check the answer for the original question against the official Project Euler site <a href="https://projecteuler.net/problem=3" target="_blank" rel="noopener noreferrer">here</a>.</p>
+
+  
+  </div>
+</body>
     <!-- Load JavaScript after DOM -->
     <script defer src="../JavaScript/Problem003LargestPrimeFactor-TrialDivision.js"></script>
-
-  </body>
 </html>

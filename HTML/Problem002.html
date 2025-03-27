@@ -6,6 +6,7 @@
     <title>Solving Problems of Project Euler</title>
     <link rel="stylesheet" href="css/styles_euler.css" />
   </head>
+  <div class=""container">
   <body>
     <h1>Here we go again.</h1>
     <h2>
@@ -41,10 +42,20 @@
     <hr />
     <p>
       As a non-CS student, I was also introduced to the concept of recursive
-      algorithms.<br />
-      A function calling itself and updating its variables till its time to stop
+      algorithms during my studies;<br />
+      A function calling itself and updating its variables till it's time to stop
       fascinated me because long codes are not necessary.<br />
+      <br><br>
+      <i>Here is the recusive logic in pseudocode:</i>
     </p>
+<div class="Explanation">
+<pre> FUNCTION sumEvenFibonacciRecursive(limit, a = 1, b = 2, sum = 0)
+      IF b > limit THEN RETURN sum
+      IF b IS EVEN THEN sum ← sum + b
+      RETURN sumEvenFibonacciRecursive(limit, b, a + b, sum)
+      END FUNCTION
+    </pre>
+    </div>
     <button id="sumEvenFibonacciRecursive">Calculate Recursively</button>
     <p>Answer: <span id="result02"></span></p>
     <p>
@@ -55,14 +66,32 @@
     <hr />
     <p>
       Let's not stop there; Could there actually be more?<br />
-      True enough, we can observe that every third Fibonacci number is even.<br />
+      True enough; we can observe that every third Fibonacci number is even.<br /><br />
       The sequence of even Fibonacci numbers follows a pattern:<br />
       2, 8, 34, 144, 610, ...<br /><br />
-      Using this pattern, we can generate only even Fibonacci numbers
-      directly.<br />
-      ie. We can use the sliding window technique to find each new Fibonacci
-      number as 4 times of the second term plus the first term and slide it
-      along.
+      Using this pattern, we can generate only even Fibonacci numbers directly.<br />
+      ie. We slide the pattern along to find each new Fibonacci
+      number as
+      <br>four times of the second term plus the first term and.</p><br /><br />
+      <i>The pseudocode may help some to visualize it better:</i>
+    </p>
+    
+<div class="Explanation">
+<pre>      FUNCTION sumEvenFibonacciSliding(limit):
+    SET a = 2  // First even Fibonacci number
+    SET b = 8  // Second even Fibonacci number
+    SET sum = 2  // Initialize sum with first even Fibonacci number
+
+    WHILE b ≤ limit:
+        sum = sum + b  // Add current even Fibonacci number to sum
+        temp = 4 * b + a  // Compute next even Fibonacci number using formula
+        a = b  // Move sliding window forward
+        b = temp  // Update b to next even Fibonacci number
+
+    RETURN sum  // Return the computed sum of even Fibonacci numbers
+
+END FUNCTION
+</pre>
     </p>
     <button id="sumEvenFibonacciSliding">Calculate Smartly</button>
     <p>Answer: <span id="result03"></span></p>
@@ -95,4 +124,5 @@
       </p></i
     >
   </body>
+</div>
 </html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Solving Problems of Project Euler</title>
+    <link rel="stylesheet" href="css/styles_euler.css" />
+  </head>
+  <body>
+    <div class="container">
+    <h1>Here we go again.</h1>
+    <h2>
+      Let's solve another problem from
+      <a href="https://projecteuler.net/about">Project Euler</a>.
+    </h2>
+    <h3>Problem Number: 004</h3>
+    <h4><b>Problem Title: Largest Palindrome Product</b></h4>
+    <p>Problem Definition: A palindromic number reads the same both ways.
+        <br>The largest palindrome made from the product of two 2-digit numbers is 9009=91x99.</p>
+    <p>
+      <b>Problem Question: </b>Find the largest palindrome from the product of two 3-digit numbers.
+    </p>
+    <hr />
+    <br /><br />
+    <button id="calculateLargestPalindromeButton">
+      Check iteratively from the largest numbers
+    </button>
+    <p>Answer: <span id="result01"></span></p>
+    <p>
+      This iterative method took us
+      <span id="executionTime01">--</span>
+    </p>
+    <hr />
+    <p>
+      <br><b>Explanation of the algorithm used in pseudocode:</b></br>
+<div class="Explanation"><pre>
+    largestPalindrome = 0
+
+for each number a from 999 down to 100:
+    for each number b from a down to 100:  # Avoid duplicate checks
+        product = a * b
+        if product is a palindrome:
+            if product is larger than largestPalindrome:
+                largestPalindrome = product  # Update largest palindrome found
+
+return largestPalindrome</pre>
+</div>
+    <hr />
+    <i><p>P.S: Check the answer for the original question against the official Project Euler site <a href="https://projecteuler.net/problem=3" target="_blank" rel="noopener noreferrer">here</a>.</p>
+  
+  </div>
+</body>
+    <!-- Load JavaScript after DOM -->
+    <script defer src="../JavaScript/Problem004Palindrome-interative.js"></script>
+</html>

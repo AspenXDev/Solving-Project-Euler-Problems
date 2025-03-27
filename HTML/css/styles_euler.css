@@ -1,4 +1,31 @@
 /* styles_euler.css */
+.explanation {
+  max-width: 100%;
+  overflow: auto;
+  background-color: #f5f5f5;
+  padding: 10px;
+  border-radius: 5px;
+  font-family: monospace;
+   /* Ensures wrapping instead of overflowing */
+  white-space: pre-wrap;
+}
+
+/* Preventing input field and button being too close together */
+input,
+button {
+  width: 100%; /* Stretch to full width on mobile */
+  max-width: 400px; /* But not too wide on computer screens */
+  padding: 10px;
+  margin: 10px 0;
+}
+
+/* For better control over responsiveness */
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
 body {
   background-color: #faf0e6;
   font-family: "Baskerville", serif;
@@ -17,8 +44,6 @@ h1 {
   font-style: italic;
   font-weight: bold;
 }
-spacer {
-  height: 2em;
 }
 
 mjx-container {

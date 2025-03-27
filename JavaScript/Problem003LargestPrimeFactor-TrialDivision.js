@@ -34,9 +34,7 @@ function largestPrimeFactor() {
   console.log("Largest Prime Factor:", result01);
 
   // Update the result in the DOM
-  document.getElementById(
-    "result01"
-  ).textContent = `Largest Prime Factor: ${result01}`;
+  document.getElementById("result01").textContent = `${result01}`;
 
   // End timer
   const endTime = performance.now();
@@ -45,7 +43,7 @@ function largestPrimeFactor() {
   // Display execution time
   document.getElementById(
     "executionTime01"
-  ).textContent = `${executionTime01} ms`; // Corrected element ID
+  ).textContent = `${executionTime01} ms`;
 }
 
 // Add event listener to the button after the DOM is fully loaded
