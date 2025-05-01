@@ -1,9 +1,58 @@
-body {
-  font-family: Arial, sans-serif;
-  background-color: #f4f4f4;
-  color: #333;
+/* Glassmorphism */
+.glassmorphism {
+  background: rgba(255, 255, 255, 0.1); /* Semi-transparent background */
+  backdrop-filter: blur(10px); /* Apply blur effect */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
 }
 
-h1 {
-  color: #0056b3;
+/* Neumorphism (Project Cards) */
+.neumorphism {
+  background: #f0f0f0; /* Soft light gray background */
+  border-radius: 12px;
+  box-shadow: 8px 8px 15px rgba(0, 0, 0, 0.1),
+    -8px -8px 15px rgba(255, 255, 255, 0.7); /* Soft, inset shadow */
+  transition: box-shadow 0.3s ease;
+}
+
+.neumorphism:hover {
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2),
+    -10px -10px 20px rgba(255, 255, 255, 0.9); /* Shadow on hover */
+}
+
+/* Light Mode (Default) */
+[data-theme="light"] {
+  --bg: #f9f9f9;
+  --text: #111;
+}
+
+/* Dark Mode */
+[data-theme="dark"] {
+  --bg: #111;
+  --text: #f9f9f9;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: "Arial", sans-serif;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Sidebar Toggle */
+#sidebarToggle:checked + #sidebar {
+  transform: translateX(0);
+}
+
+/* Responsive Grid Layout */
+@media (max-width: 1024px) {
+  #portfolio,
+  #links {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (min-width: 1024px) {
+  #portfolio {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
