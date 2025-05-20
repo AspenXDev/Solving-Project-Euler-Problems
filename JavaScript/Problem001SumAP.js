@@ -10,29 +10,29 @@ function calculateByAP() {
   // Start timer
   const startTime = performance.now();
 
-  // Get user inputs
-  const multiple2_1 = parseInt(
-    document.getElementById("multiple2_1").value,
+  // Get user inputs - **CORRECTED IDs HERE**
+  const multiple1_1 = parseInt(
+    document.getElementById("multiple1_1").value,
     10
   );
-  const multiple2_2 = parseInt(
-    document.getElementById("multiple2_2").value,
+  const multiple1_2 = parseInt(
+    document.getElementById("multiple1_2").value,
     10
   );
-  const limit2 = parseInt(document.getElementById("limit2").value, 10);
+  const limit1 = parseInt(document.getElementById("limit1").value, 10);
 
-  console.log("Multiple 1:", multiple2_1);
-  console.log("Multiple 2:", multiple2_2);
-  console.log("Limit:", limit2);
+  console.log("Multiple 1:", multiple1_1);
+  console.log("Multiple 2:", multiple1_2);
+  console.log("Limit:", limit1);
 
   // Error handling: invalid inputs
   if (
-    isNaN(limit2) ||
-    isNaN(multiple2_1) ||
-    isNaN(multiple2_2) ||
-    limit2 <= 0 ||
-    multiple2_1 <= 0 ||
-    multiple2_2 <= 0
+    isNaN(limit1) ||
+    isNaN(multiple1_1) ||
+    isNaN(multiple1_2) ||
+    limit1 <= 0 ||
+    multiple1_1 <= 0 ||
+    multiple1_2 <= 0
   ) {
     document.getElementById("result02").textContent =
       "Please enter valid positive numbers.";
@@ -56,16 +56,16 @@ function calculateByAP() {
   }
 
   // Calculate number of terms in the AP sequence for each multiple
-  const n1 = Math.floor((limit2 - 1) / multiple2_1);
-  const n2 = Math.floor((limit2 - 1) / multiple2_2);
+  const n1 = Math.floor((limit1 - 1) / multiple1_1);
+  const n2 = Math.floor((limit1 - 1) / multiple1_2);
 
   // Find LCM of the two numbers to handle double-counting
-  const commonMultiple = lcm(multiple2_1, multiple2_2);
-  const nCommon = Math.floor((limit2 - 1) / commonMultiple);
+  const commonMultiple = lcm(multiple1_1, multiple1_2);
+  const nCommon = Math.floor((limit1 - 1) / commonMultiple);
 
   // Compute sums using the AP formula
-  const sumMultiple1 = sumAP(multiple2_1, n1, multiple2_1);
-  const sumMultiple2 = sumAP(multiple2_2, n2, multiple2_2);
+  const sumMultiple1 = sumAP(multiple1_1, n1, multiple1_1);
+  const sumMultiple2 = sumAP(multiple1_2, n2, multiple1_2);
   const sumCommon = sumAP(commonMultiple, nCommon, commonMultiple);
 
   // Apply inclusion-exclusion principle to avoid double-counting
@@ -85,5 +85,5 @@ function calculateByAP() {
   // Display execution time
   document.getElementById(
     "executionTime02"
-  ).textContent = `${executionTime02} `;
+  ).textContent = `${executionTime02} ms`;
 }
