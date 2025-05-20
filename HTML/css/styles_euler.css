@@ -1,10 +1,10 @@
 /* styles_euler.css */
 .explanation {
-  max-width: 100%;
+  max-width: clamp(60vw, 80vw, 100vw);
   overflow: auto;
   background-color: #f5f5f5;
-  padding: 10px;
-  border-radius: 5px;
+  padding: clamp(1vw, 2vw, 8vw);
+  border-radius: clamp(3px, 4px, 5px);
   font-family: monospace;
    /* Ensures wrapping instead of overflowing */
   white-space: pre-wrap;
@@ -15,15 +15,18 @@ input,
 button {
   width: 100%; /* Stretch to full width on mobile */
   max-width: 400px; /* But not too wide on computer screens */
-  padding: 10px;
+  padding: clamp(1vw, 2vw, 8vw);
   margin: 10px 0;
 }
 
 /* For better control over responsiveness */
 .container {
+  display: flex;
+  flex-direction: column;
   max-width: 800px;
   margin: 0 auto;
   padding: 20px;
+  font-size: clamp(0.8rem, 1.5vw, 1.1rem);
 }
 
 body {
@@ -110,6 +113,7 @@ mjx-mfrac {
   ); /* Light background color for contrast */
   border-radius: 5px; /* Rounded corners for a modern touch */
 }
+
 
 #executionTime01 {
   font-family: "Roboto", sans-serif; /* Modern, clean sans-serif font */
