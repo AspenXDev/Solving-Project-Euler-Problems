@@ -1,3 +1,23 @@
+.header {
+  grid-area: header;
+  background: linear-gradient(to right, #f4f3f3, #01102b);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+
+  display: inline-block;
+  padding: clamp(12px, 4vw, 24px);
+  font-family: "Segoe UI", "Helvetica Neue", sans-serif;
+  font-size: clamp(1.5rem, 2vw + 1rem, 2.5rem);
+  font-weight: 600;
+  text-align: center;
+  letter-spacing: 0.5px;
+
+  border-bottom: 1px solid #ddd;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
 /* Glassmorphism */
 .glassmorphism {
   background: rgba(255, 255, 255, 0.1); /* Semi-transparent background */
@@ -38,21 +58,11 @@ body {
   transition: all 0.3s ease-in-out;
 }
 
-/* Sidebar Toggle */
-#sidebarToggle:checked + #sidebar {
-  transform: translateX(0);
-}
-
-/* Responsive Grid Layout */
-@media (max-width: 1024px) {
-  #portfolio,
-  #links {
-    grid-template-columns: 1fr;
-  }
-}
-
-@media (min-width: 1024px) {
-  #portfolio {
-    grid-template-columns: repeat(2, 1fr);
-  }
+/* Footer */
+footer {
+  background-color: var(--bg);
+  color: var(--text);
+  padding: 20px;
+  text-align: center;
+  font-size: clamp(5vp, 14px, 10vp);
 }
