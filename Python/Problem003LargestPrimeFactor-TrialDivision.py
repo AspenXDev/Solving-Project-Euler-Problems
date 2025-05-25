@@ -1,16 +1,28 @@
-def largest_prime_factor(n):
-    factor = 2
+def largest_prime_factor(n: int) -> int:
+    """
+    Finds the largest prime factor of a given number n.
+    Assumes n >= 2.
+    """
+    max_prime = -1
 
-    # Remove all factors of 2
-    while n % 2 == 0:
-        n //= 2
+    # Handle factor 2
+    if n % 2 == 0:
+        max_prime = 2
+        while n % 2 == 0:
+            n //= 2
 
-    # Check odd numbers from 3 onwards
+    # Iterate through odd factors
     factor = 3
     while factor * factor <= n:
-        while n % factor == 0:
-            n //= factor
-        factor += 2  # Increment by 2 to check only odd numbers
+        if n % factor == 0:
+            max_prime = factor
+            while n % factor == 0:
+                n //= factor
+        factor += 2
 
-    # If there's a prime factor left, return it; otherwise, return the last factor checked
-    return n if n > 1 else factor
+    # Final Check: If n is still greater than 1 after all divisions,
+    # the remaining n is a prime number and is the largest prime factor.
+    if n > 1:
+        max_prime = n
+    
+    return max_prime
