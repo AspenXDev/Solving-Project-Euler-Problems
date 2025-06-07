@@ -8,7 +8,7 @@ The solutions are written in **JavaScript** and **Python** to demonstrate my ski
 - `JavaScript/`: Contains all the solutions to the Project Euler problems written in JavaScript.
 - `Python/`: Here I've stored all the solutions  written in Python.
 - `Java/`: This folder is where I've practiced writing Java methods to the solutions.
-- 
+
 ## Technologies Used
 
 - JavaScript (for general problem-solving and later transition to ServiceNow)
